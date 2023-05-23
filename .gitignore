@@ -16,10 +16,6 @@
 *.dylib
 *.dll
 
-# Fortran module files
-*.mod
-*.smod
-
 # Compiled Static libraries
 *.lai
 *.la
@@ -30,3 +26,15 @@
 *.exe
 *.out
 *.app
+
+# Debug files
+/Day_1/Day_1_Lib/x64/Debug
+/Day_1/Day_1_test/x64/Debug
+/Day_1/x64/Debug
+
+# Local build and cache
+/Day_1/.vs
+/Day_1/packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.7
+
+# User specific
+*.user
