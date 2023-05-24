@@ -1,5 +1,7 @@
-#include "pch.h"
-#include "Day_1_Lib/Day_1_lib.h"
+import Day_1_Lib;
+#include <iosfwd>
+#include <string>
+#include "gtest/gtest.h"
 
 
 TEST(OneElf, TestName) {

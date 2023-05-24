@@ -1,11 +1,7 @@
-// Day_1_Lib.cpp : Defines the functions for the static library.
-//
+module Day_1_Lib;
 
-#include "pch.h"
-#include "Day_1_Lib.h"
-
-#include <sstream>
-#include <string>
+import <sstream>;
+import <string>;
 
 
 int ReadOneElf(std::istream& input)

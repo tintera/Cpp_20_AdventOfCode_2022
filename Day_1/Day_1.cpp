@@ -1,7 +1,9 @@
 // Day_1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-#include "Day_1_lib/Day_1_lib.h"
+import Day_1_Lib;
 #include <fstream>
+#include <iostream>
+
 
 int main()
 {
