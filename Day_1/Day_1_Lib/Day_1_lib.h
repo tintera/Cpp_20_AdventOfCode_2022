@@ -7,3 +7,5 @@
 int ReadOneElf(std::istream& input);
 
 int FindMostCalories(std::istream& input);
+
+int FindTopThree(std::istream& input);

@@ -34,3 +34,33 @@ TEST(MostCalories, TwoElfs)
 	std::stringstream ssTwoElfs{ "1000\n\n2000\n3000\n" };
 	EXPECT_EQ(5'000, FindMostCalories(ssTwoElfs));
 }
+
+TEST(TopThree, Empty)
+{
+	std::stringstream ssEmpty{ std::string{} };
+	EXPECT_EQ(0, FindTopThree(ssEmpty));
+}
+
+TEST(TopThree, SingleElf)
+{
+	std::stringstream ssOneElf{ "1000\n" };
+	EXPECT_EQ(1'000, FindTopThree(ssOneElf));
+}
+
+TEST(TopThree, TwoElfs)
+{
+	std::stringstream ssTwoElfs{ "1000\n\n2000\n3000\n" };
+	EXPECT_EQ(6'000, FindTopThree(ssTwoElfs));
+}
+
+TEST(TopThree, ThreeElfs)
+{
+	std::stringstream ssThreeElfs{ "1000\n\n2000\n3000\n\n4000\n5000\n6000\n" };
+	EXPECT_EQ(21'000, FindTopThree(ssThreeElfs));
+}
+
+TEST(TopThree, FourElfs)
+{
+	std::stringstream ssFourElfs{ "1000\n\n2000\n3000\n\n4000\n5000\n6000\n\n7000\n8000\n9000\n" };
+	EXPECT_EQ(44'000, FindTopThree(ssFourElfs));
+}

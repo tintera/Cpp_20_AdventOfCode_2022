@@ -33,3 +33,29 @@ int FindMostCalories(std::istream& input)
 	}
 	return maxCal;
 }
+
+int FindTopThree(std::istream& input)
+{
+	// maxcal[0] contains highest, 1 second highest, 2 third highest
+	int maxCal[3]{ 0,0,0 };
+	while (!input.eof())
+	{
+		const auto cal{ ReadOneElf(input) };
+		if (cal > maxCal[0])
+		{
+			maxCal[2] = maxCal[1];
+			maxCal[1] = maxCal[0];
+			maxCal[0] = cal;
+		}
+		else if (cal > maxCal[1])
+		{
+			maxCal[2] = maxCal[1];
+			maxCal[1] = cal;
+		}
+		else if (cal > maxCal[2])
+		{
+			maxCal[2] = cal;
+		}
+	}
+	return maxCal[0] + maxCal[1] + maxCal[2];
+}
